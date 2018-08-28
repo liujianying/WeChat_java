@@ -1,0 +1,8 @@
+package com.tencent.mm.g.a;
+
+import android.content.Context;
+
+public final class bu$a {
+    public String bJl;
+    public Context context;
+}

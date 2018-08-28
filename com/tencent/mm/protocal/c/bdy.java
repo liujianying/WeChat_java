@@ -1,0 +1,56 @@
+package com.tencent.mm.protocal.c;
+
+import com.tencent.mm.bk.a;
+import f.a.a.b;
+
+public final class bdy extends a {
+    public String fWF;
+    public int jRb;
+
+    protected final int a(int i, Object... objArr) {
+        int fQ;
+        if (i == 0) {
+            f.a.a.c.a aVar = (f.a.a.c.a) objArr[0];
+            if (this.fWF == null) {
+                throw new b("Not all required fields were included: jsonData");
+            }
+            aVar.fT(1, this.jRb);
+            if (this.fWF != null) {
+                aVar.g(2, this.fWF);
+            }
+            return 0;
+        } else if (i == 1) {
+            fQ = f.a.a.a.fQ(1, this.jRb) + 0;
+            if (this.fWF != null) {
+                return fQ + f.a.a.b.b.a.h(2, this.fWF);
+            }
+            return fQ;
+        } else if (i == 2) {
+            f.a.a.a.a aVar2 = new f.a.a.a.a((byte[]) objArr[0], unknownTagHandler);
+            for (fQ = a.a(aVar2); fQ > 0; fQ = a.a(aVar2)) {
+                if (!super.a(aVar2, this, fQ)) {
+                    aVar2.cJS();
+                }
+            }
+            if (this.fWF != null) {
+                return 0;
+            }
+            throw new b("Not all required fields were included: jsonData");
+        } else if (i != 3) {
+            return -1;
+        } else {
+            f.a.a.a.a aVar3 = (f.a.a.a.a) objArr[0];
+            bdy bdy = (bdy) objArr[1];
+            switch (((Integer) objArr[2]).intValue()) {
+                case 1:
+                    bdy.jRb = aVar3.vHC.rY();
+                    return 0;
+                case 2:
+                    bdy.fWF = aVar3.vHC.readString();
+                    return 0;
+                default:
+                    return -1;
+            }
+        }
+    }
+}
